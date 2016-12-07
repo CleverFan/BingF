@@ -7,4 +7,8 @@ a {
   color: #00B7FF;
 }
 
-div#tools
+div#tools{
+  width: 100%;
+  height: 50px;
+  background-color: burlywood;
+}
