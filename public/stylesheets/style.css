@@ -1,14 +1,78 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
+table,td,tr,th{
+  border: 1px solid black;
+}
+
 
 a {
   color: #00B7FF;
 }
+/*移除bootstrap默认的样式，全屏*/
+.container-fluid{
+  padding: 0px !important;
+}
+
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
 
 div#tools{
+  position:fixed;
   width: 100%;
-  height: 50px;
   background-color: burlywood;
+}
+div#editor-edit{
+  height: 100%;
+
+  background-color: aliceblue;
+}
+div#editor-show{
+  height: 100%;
+
+  background-color : #ffb951;
+}
+.navbar-inner ul {
+  height: 100%;
+  width: auto;
+  position: absolute;
+
+}
+.navbar-inner ul li {
+
+  float:left;
+  list-style-type: none;
+  background-color: burlywood;
+  height: 100%;
+  padding: auto;
+
+}
+.navbar-inner ul li:hover{
+  background-color: #37de6b;
+}
+
+div#filePanel{
+  background-color: blanchedalmond;
+}
+#contentForm{
+  width: 100%;
+  height: 100%;
+}
+
+#content{
+  width: 100%;
+  height: 100%;
+}
+
+div #filePanel{
+  display : none;
+}
+
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+  padding-right: 0px;
+  padding-left: 0px;
 }

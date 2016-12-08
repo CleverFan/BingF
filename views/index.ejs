@@ -3,38 +3,76 @@
   <head>
     <title><%= title %></title>
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
   </head>
+  <script>
+    function onInput(e) {
+      //alert(e.target.value)
+    }
+  </script>
   <body>
 
-    <div class="container-fluid">
-      <div class="row" id="tools">
+    <div class="container-fluid" id="app">
 
-      </div>
-      <div class="row" id="editor">
-        <div class="clo-xs-6" id="editor-edit">
+      <div class="row">
+        <div class="col-md-2" id="filePanel">
 
         </div>
-        <div class="clo-xs-6" id="editor-show">
+        <div class="col-md-12" id="mainPanel">
+          <div class="row" id="tools">
+            <div class="navbar-inner">
 
+              <ul class="nav">
+                <li class="text-center" id="controlFilePanel"><i class="fa fa-file"></i></li>
+                <li class="text-center"><i class="fa fa-bold"></i></li>
+                <li class="text-center"><i class="fa fa-italic"></i></li>
+                <li class="text-center"><i class="fa fa-th-list"></i></li>
+                <li class="text-center"><i class="fa fa-list-ol"></i></li>
+                <li class="text-center"><i class="fa fa-list-ul"></i></li>
+                <li class="text-center"><i class="fa fa-link"></i></li>
+                <li class="text-center"><i class="fa fa-picture-o"></i></li>
+              </ul>
+
+
+            </div>
+          </div>
+          <div class="row" id="editor">
+            <div class="col-md-6" id="editor-edit">
+              <form role="form" id="contentForm">
+                <textarea name="content" class="form-control" id="content" ></textarea>
+              </form>
+            </div>
+            <div class="col-md-6" id="editor-show">
+
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
+
+      </div>
 
 
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="//cdn.bootcss.com/vue/2.1.4/vue.min.js"></script>
     <script src="/javascripts/analysis.js"></script>
+    <script src="/javascripts/file.js"></script>
     <script>
-      new Vue({
-        el : "",
-        data : {
+      window.onload = function () {
+        var $height = $(window).height();
+        var $toolsHeight = $height / 20;
+        //var $editorHeight = $height - $toolsHeight;
+        $('#filePanel').css("height",$height);
+        $('#tools').css("height",$toolsHeight);
 
-        }
-      })
+        $('#editor').css("height",$height).css("padding-top",$toolsHeight);
+        $('ul > li').css("width",$toolsHeight).css("padding-top",$toolsHeight/3);
+
+      }
+
     </script>
   </body>
 </html>
