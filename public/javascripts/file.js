@@ -1,7 +1,10 @@
 /**
  * Created by chengfan on 2016/12/7.
  */
+
 $(document).ready(function () {
+
+
     var $showFile = $('#controlFilePanel');
     var $filePanel = $('#filePanel');
     var $mainPanel = $('#mainPanel');
@@ -19,4 +22,5 @@ $(document).ready(function () {
             isShow = false;
         }
     });
+
 });

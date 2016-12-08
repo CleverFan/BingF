@@ -26,8 +26,8 @@
 
               <ul class="nav">
                 <li class="text-center" id="controlFilePanel"><i class="fa fa-file"></i></li>
-                <li class="text-center"><i class="fa fa-bold"></i></li>
-                <li class="text-center"><i class="fa fa-italic"></i></li>
+                <li class="text-center" id="overstriking"><i class="fa fa-bold"></i></li>
+                <li class="text-center" id="incline"><i class="fa fa-italic"></i></li>
                 <li class="text-center"><i class="fa fa-th-list"></i></li>
                 <li class="text-center"><i class="fa fa-list-ol"></i></li>
                 <li class="text-center"><i class="fa fa-list-ul"></i></li>
@@ -58,20 +58,19 @@
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/javascripts/content.js"></script>
     <script src="/javascripts/analysis.js"></script>
+    <script src="/javascripts/tools.js"></script>
     <script src="/javascripts/file.js"></script>
     <script>
-      window.onload = function () {
-        var $height = $(window).height();
-        var $toolsHeight = $height / 20;
+        var _height = $(window).height();
+        var _toolsHeight = _height / 20;
         //var $editorHeight = $height - $toolsHeight;
-        $('#filePanel').css("height",$height);
-        $('#tools').css("height",$toolsHeight);
+        $('#filePanel').css("height",_height);
+        $('#tools').css("height",_toolsHeight);
 
-        $('#editor').css("height",$height).css("padding-top",$toolsHeight);
-        $('ul > li').css("width",$toolsHeight).css("padding-top",$toolsHeight/3);
-
-      }
+        $('#editor').css("height",_height).css("padding-top",_toolsHeight);
+        $('ul > li').css("width",_toolsHeight).css("padding-top",_toolsHeight/3);
 
     </script>
   </body>

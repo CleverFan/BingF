@@ -4,8 +4,19 @@
 
 $(document).ready(function () {
     var $show = $('#editor-show')
+    var renderer_zai30 = new marked.Renderer();
+    marked.setOptions({
+        renderer: renderer_zai30,
+        gfm: true,
+        tables: true,
+        breaks: true,//回车换成br
+        pedantic: true,
+        sanitize: true,
+        smartLists: true,
+        smartypants: true
+    });
     $('#content').bind('input propertychange',function (e) {
-        //alert(e.target.value)
+        //console.log(e.target.value)
         var tr = marked(e.target.value);
         //$show.html(tr);
         //console.log(tr);
