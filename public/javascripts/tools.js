@@ -9,10 +9,6 @@ $(document).ready(function () {
     /**
      * 获得选中的文本
      * */
-    function getChooseTxt() {
-        return funGetSelected(_$content);
-    };
-
     var selectTxt = funGetSelected(_$content);
 
     /**
@@ -29,7 +25,7 @@ $(document).ready(function () {
         if(!selectTxt){
             //没有文字选中
             //$content.val($content.val() + '\n'+'** 重点内容 **');
-            funInsertTopic(_$content);
+            insertMsg(_$content,"** 重点内容 **");
         } else {
             funTextAsTopic(_$content,"##"+selectTxt+"##");
         }
@@ -72,8 +68,8 @@ $(document).ready(function () {
         }
     };
 
-    function funInsertTopic(textObj) {
-        var msg = "## 重点内容 ##", value = textObj.value, index = value.indexOf(msg);
+    function insertMsg(textObj,msg) {
+        var value = textObj.value, index = value.indexOf(msg);
         if (index === -1) {
             //匹配
             funTextAsTopic(textObj, msg);
